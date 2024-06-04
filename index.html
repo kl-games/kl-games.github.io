@@ -199,12 +199,36 @@
                     Approach
                 </h3>
                 <p class="text-justify">
-                    RCIP builds upon statistical risk calibration (SRC) to formally quantify and bound multiple notions of
+
+                    Our proposed approach can seamlessly integrate data-driven policies with optimization-based dynamic game solutions. 
+                    Data-driven behavior predictors, such as transformer-based methods, provide <em>marginal</em> (i.e., single-agent) priors
+                    for human motion prediction, but may struggle to model <em>closed-loop</em>, multi-agent interactions.
+                    <!-- RCIP builds upon statistical risk calibration (SRC) to formally quantify and bound multiple notions of
                     risk in human-robot interaction (HRI).  Using a small set of calibration scenarios, RCIP computes step-wise prediction
                     losses to form an aggregate emperical risk estimate. Using a risk limit, for each pair (λ,θ) of prediction thresholds
                     and tunable model parameters, RCIP evaluates the hypothesis that the test set risk is above the limit.
-                    Thus, for all hypotheses that are rejected, the test set risk satisfies the threshold (with high probability).
+                    Thus, for all hypotheses that are rejected, the test set risk satisfies the threshold (with high probability). -->
+<!-- 
+                    Our proposed approach can seamlessly integrate data-driven
+                    policies with optimization-based dynamic game solutions.
+                    Data-driven behavior predictors, such as transformer-based methods,
+                    provide marginal (i.e., single-agent) priors for human motion
+                    prediction, but may struggle to model closed-loop, multi-agent
+                    interactions. Whereas our proposed method, KLGame, allows a robot
+                    to incorporate guidance from data-driven rollouts while performing
+                    online game-theoretic planning in closed-loop. KLGame uses
+                    a tunable parameter λ that modulates behaviors on a spectrum: λ = 0
+                    gives a deterministic dynamic game (task-optimal), and λ → ∞ gives
+                    multi-modal behavior cloning. We call this tunability policy blending. -->
+
                 </p>
+                <p class="text-justify">
+                    Whereas our proposed method, KLGame, allows a robot to incorporate <em>guidance</em> from data-driven rollouts while 
+                    performing online game-theoretic planning in closed-loop. KLGame uses a <em>tunable</em> parameter <span>&lambda;</span> 
+                    that modulates behaviors on a spectrum: <span>&lambda;=0</span> gives a deterministic dynamic game (<em>task-optimal</em>), 
+                    and <span>&lambda;&rarr;&infin;</span> gives multi-modal behavior cloning. We call this tunability <em>policy blending</em>.
+                </p>
+
                 <p style="text-align:center;">
                     <image src="img/fig2_master_simplified.png" width="100%"></image>
 <!--                    <embed type="application/pdf" src="img/figure1_tricolumn-compressed.pdf"></embed>-->
